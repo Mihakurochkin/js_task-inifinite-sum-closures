@@ -15,7 +15,9 @@ function makeInfinityAdder() {
       return copy;
     }
 
-    sum += item;
+    if (typeof item === 'number') {
+      sum += item;
+    }
 
     return adder;
   };
